@@ -146,7 +146,7 @@ export default function HomePage() {
               </p>
               <h2 className="mt-6 text-4xl font-bold leading-tight tracking-tight text-zinc-900 md:text-6xl">
                 大石生花店
-                <span className="block text-emerald-700">想いを聞いて、ぴったりの花をご提案します。</span>
+                <span className="block text-emerald-700">想いを聞き、ぴったりの花をご提案します。</span>
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-600">
                 お祝いの花束から日常を彩るアレンジメントまで、ご希望やご予算に合わせてご提案します。写真での相談もできるので、初めての方でも安心です。
@@ -227,8 +227,8 @@ export default function HomePage() {
           <div className="mx-auto max-w-6xl px-6">
             <SectionTitle
               eyebrow="Gallery"
-              title="生花やアレンジメントの雰囲気が伝わるギャラリー"
-              body="Instagramとは別に、サイト内でも人気の雰囲気や作例を見られるようにしました。このギャラリーやInstagramを参考にしてください。"
+              title="ギャラリー"
+              body="Instagramとは別に、サイト内でも人気の雰囲気や作例を見ることができます。このギャラリーやInstagramを参考にしてください。"
             />
             <div className="mt-10 flex justify-center">
               <Link
@@ -327,7 +327,7 @@ export default function HomePage() {
                   rel="noreferrer"
                   className="mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-emerald-600 px-6 py-4 text-base font-bold text-white shadow-lg shadow-emerald-200 transition hover:-translate-y-0.5 hover:bg-emerald-700"
                 >
-                  Instagramを見たあとLINEで相談する
+                  LINEで相談する
                 </a>
               </div>
             </div>
@@ -379,6 +379,8 @@ export default function HomePage() {
                 <h3 className="mt-3 text-2xl font-bold">予約フォーム</h3>
                 <p className="mt-3 text-sm leading-7 text-zinc-600">
                   ご注文内容が決まっている方は、受取日・予算・用途などをまとめて送れる予約フォームが最短です。
+                  {/* ＊配達の場合は¥3,300から配達料¥550円で承っております。また¥5,500円以上の場合配達料がかかりませんので気兼ねなくご利用ください。
+                  ＊配達可能時間は17時半までで承っております。配達圏内は牧之原市と吉田町です。 */}
                 </p>
                 <ul className="mt-4 space-y-2 text-sm text-zinc-600">
                   <li>・必要項目を漏れなく送れる</li>
@@ -458,7 +460,7 @@ export default function HomePage() {
 
                   <div className="grid grid-cols-[96px_1fr] gap-4 border-b border-zinc-200 pb-4">
                     <p className="font-semibold text-zinc-500">定休日</p>
-                    <p>木曜日</p>
+                    <p>第２第４火曜日、毎週木曜日</p>
                   </div>
 
                   <div className="grid grid-cols-[96px_1fr] gap-4 border-b border-zinc-200 pb-4">

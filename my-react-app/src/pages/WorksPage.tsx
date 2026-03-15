@@ -13,6 +13,7 @@ type WorkItem = {
   title: string;
   description: string;
   price?: string;
+  number?: string;
 };
 
 // http://localhost:5173/admin/upload
@@ -23,29 +24,36 @@ const works: WorkItem[] = [
     alt: 'やさしい色合いの花束',
     category: '花束',
     title: 'やさしい色合いの花束',
-    description: 'やわらかい色味で、誕生日やお祝いに選ばれやすい作例です。',
-    price:'¥2,200',
+    description: 'やわらかい色味で、誕生日やお祝いに選ばれやすい。',
+    price:'¥3,300',
+    number:'1'
   },
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773485072/quf4ogodtm8tcru4xuyk.jpg',
     alt: '華やかな花束',
     category: '花束',
     title: '華やかな花束',
-    description: '明るく華やかな印象で、贈りものとして存在感のある作例です。',
+    description: '明るく華やかな印象で、贈りものとして存在感のある。',
+    price:'¥3,300',
+    number:'2',
   },
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773485044/kbx7ajs0ukfkzuvzlm5c.jpg',
     alt: '紫ベースの大人な花束',
     category: '花束',
     title: '紫ベースの大人な花束',
-    description: '落ち着きと上品さを感じる、大人っぽい雰囲気の作例です。',
+    description: '落ち着きと上品さを感じる、大人っぽい雰囲気の。',
+    price:'¥3,850',
+    number:'3',
   },
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773484837/zkgezyuolybulywi0xvo.jpg',
-    alt: '正月をイメージしたアレンジメント',
-    category: 'アレンジメント',
+    alt: 'アレンジメント',
+    category: 'フラワーアレンジメント',
     title: '正月をイメージしたアレンジメント',
-    description: '季節感を意識した、印象に残るアレンジメントの作例です。',
+    description: '季節感を意識した、アレンジメントです。',
+    price:'¥3,300',
+    number:'1',
   },
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773485021/y2dnlypgvtim8iqsxbtn.jpg',
@@ -53,45 +61,53 @@ const works: WorkItem[] = [
     category: '花束',
     title: '明るい色味のお祝い用花束',
     description: 'お祝いの場面に合わせやすい、元気で明るい印象の花束です。',
+    price:'¥6,600',
+    number:'4',
   },
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773484900/ncjtpcikcujdapzzdxoy.jpg',
-    alt: '高級感のあるアレンジメント',
-    category: 'アレンジメント',
-    title: '高級感のあるアレンジメント',
-    description: '特別な日の贈りものにも合う、上質感のある作例です。',
-    price:'¥5,500',
+    alt: '高級感のある',
+    category: 'お供え用アレンジメント',
+    title: 'アレンジメント',
+    description: 'お供え物に合う、上質感のあるアレンジメントです。',
+    price:'¥7150',
+    number:'1'
   },
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773483398/hebbuylwdk5c3xarij9u.jpg',
-    alt: '正月をイメージしたアレンジメント',
-    category: 'アレンジメント',
-    title: '正月をイメージしたアレンジメント',
-    description: '季節感を意識した、印象に残るアレンジメントの作例です。',
+    alt: '',
+    category: '花束',
+    title: '暖かい色合いの花束',
+    description: '季節感を意識した、印象に残る花束です。',
+    price:'¥4,400',
+    number:'5'
   },
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773485368/nomfmwuskiy82teevqid.jpg',
     alt: 'やさしい色合いの花束',
     category: '花束',
-    title: 'やさしい色合いの花束',
-    description: 'やわらかい色味で、誕生日やお祝いに選ばれやすい作例です。',
-    price:'¥2,200',
+    title: '緑色ベースの花束',
+    description: '鮮やかな色味で、誕生日やお祝いに選ばれやすい。',
+    price:'¥3,850',
+    number:'6'
   },
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773485430/ujvixrsmk9ljvoldqaag.jpg',
     alt: 'やさしい色合いの花束',
     category: '花束',
-    title: 'やさしい色合いの花束',
-    description: 'やわらかい色味で、誕生日やお祝いに選ばれやすい作例です。',
-    price:'¥2,200',
+    title: 'やさしい黄色をベースにした花束',
+    description: 'やわらかい色味で、誕生日やお祝いに選ばれやすい。',
+    price:'¥3,300',
+    number:'7'
   },
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773485476/jmiejxlh4btmvrfqj2tt.jpg',
-    alt: 'やさしい色合いの花束',
+    alt: '赤系の花束',
     category: '花束',
-    title: 'やさしい色合いの花束',
-    description: 'やわらかい色味で、誕生日やお祝いに選ばれやすい作例です。',
-    price:'¥2,200',
+    title: '赤系の花束',
+    description: 'やわらかい色味で、誕生日やお祝いに選ばれやすい。',
+    price:'¥4,400',
+    number:'8'
   },
 ];
 
@@ -146,6 +162,7 @@ export default function WorksPage() {
                 <div className="p-5">
                   <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-700">
                     {work.category}
+                    {work.number}
                   </p>
                   <h3 className="mt-2 text-xl font-bold text-zinc-900">{work.title}</h3>
                     {work.price && (
@@ -168,6 +185,7 @@ export default function WorksPage() {
                 </h3>
                 <p className="mt-3 text-base leading-8 text-zinc-600">
                   「この写真みたいな色味で」「この作例に近い雰囲気で」など、画像をもとに相談するとイメージ共有がしやすくなります。
+
                 </p>
               </div>
 
