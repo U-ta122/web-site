@@ -11,6 +11,7 @@ type WorkItem = {
 };
 
 // http://localhost:5173/admin/upload
+// この値段からお受けしています的な文言もわんちゃん欲しい
 
 const works: WorkItem[] = [
   {
@@ -44,8 +45,8 @@ const works: WorkItem[] = [
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773484837/zkgezyuolybulywi0xvo.jpg',
     alt: 'アレンジメント',
     category: 'フラワーアレンジメント',
-    title: '正月をイメージしたアレンジメント',
-    description: '季節感を意識した、アレンジメントです。',
+    title: '正月のアレンジメント',
+    description: '季節感を意識したアレンジメントです。',
     price:'¥3,300',
     number:'1',
   },

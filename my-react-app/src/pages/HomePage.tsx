@@ -74,7 +74,7 @@ export default function HomePage() {
     alt: '紫ベースの大人な花束',
     category: '花束',
     title: '紫ベースの大人な花束',
-    description: '落ち着きと上品さを感じる、大人っぽい雰囲気の。',
+    description: '落ち着きと上品さを感じる、大人っぽい雰囲気の花束です。',
     price:'¥3,850',
     number:'3',
   },
@@ -212,8 +212,8 @@ export default function HomePage() {
         <section id="sizes" className="mx-auto max-w-6xl px-6 py-20">
           <SectionTitle
             eyebrow="Size Guide"
-            title="アレンジメントのサイズ感がわかるセクション"
-            body="注文前に気になりやすい『どれくらいの大きさ？』を、用途ごとに整理しています。LINEで相談するときも、このサイズ感を基準にお伝えください。"
+            title="花束・フラワーアレンジメントのサイズ感"
+            body="LINEで相談する際には、このサイズ感を基準にお伝えください。"
           />
 
           <div className="mt-14 grid gap-6 lg:grid-cols-3">
