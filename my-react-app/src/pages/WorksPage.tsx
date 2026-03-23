@@ -1,10 +1,4 @@
 import { Link } from 'react-router-dom';
-// import flower1 from '../assets/flower1.jpg';
-// import flower2 from '../assets/flower2.jpg';
-// import flower3 from '../assets/flower3.jpg';
-// import flower5 from '../assets/flower5.jpg';
-// import flower6 from '../assets/flower6.jpg';
-// import feb_flower from '../assets/feb-flower.jpg';
 
 type WorkItem = {
   src: string;

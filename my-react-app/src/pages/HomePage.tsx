@@ -1,12 +1,7 @@
 import { Link } from 'react-router-dom';
-import flower1 from '../assets/flower1.jpg';
-import flower2 from '../assets/flower2.jpg';
-import flower3 from '../assets/flower3.jpg';
-import flower5 from '../assets/flower5.jpg';
-import flower6 from '../assets/flower6.jpg';
-import feb_flower from '../assets/feb-flower.jpg';
 
 type ArrangementCardProps = {
+  src?: string;
   title: string;
   price: string;
   size: string;
@@ -14,7 +9,17 @@ type ArrangementCardProps = {
   examples: string[];
 };
 
-function ArrangementCard({ title, price, size, description, examples }: ArrangementCardProps) {
+type GalleryItem = {
+  src: string;
+  alt: string;
+  category: string;
+  title: string;
+  description: string;
+  price?: string;
+  number?: string;
+};
+
+function ArrangementCard({ src, title, price, size, description, examples }: ArrangementCardProps) {
   return (
     <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
       <div className="mb-4 flex items-start justify-between gap-4">
@@ -26,6 +31,12 @@ function ArrangementCard({ title, price, size, description, examples }: Arrangem
           {price}
         </div>
       </div>
+      <div className="h-120 overflow-hidden bg-zinc-100  rounded-[1.75rem]">
+                    <img
+                      src={src}
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                  </div>
 
       <div className="mb-4 rounded-2xl bg-zinc-50 p-4">
         <p className="text-sm font-semibold text-zinc-500">サイズ感の目安</p>
@@ -57,41 +68,39 @@ function SectionTitle({ eyebrow, title, body }: { eyebrow: string; title: string
 }
 
 export default function HomePage() {
-  const galleryImages = [
-    {
-      src: flower1,
-      alt: "やさしい色合いの花束",
-      category: "花束",
-    },
-    {
-      src: flower2,
-      alt: "華やかな花束",
-      category: "花束",
-    },
-    {
-      src: flower3,
-      alt: "紫ベースの大人な花束",
-      category: "花束",
-    },
-    {
-      src: feb_flower,
-      alt: "正月をイメージしたアレンジメント",
-      category: "アレンジメント",
-    },
-    {
-      src: flower5,
-      alt: "明るい色味のお祝い用花束",
-      category: "花束",
-    },
-    {
-      src: flower6,
-      alt: "高級感のあるアレンジメント",
-      category: "アレンジメント",
-    },
+  const gallery:GalleryItem[]= [
+  {
+    src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773485044/kbx7ajs0ukfkzuvzlm5c.jpg',
+    alt: '紫ベースの大人な花束',
+    category: '花束',
+    title: '紫ベースの大人な花束',
+    description: '落ち着きと上品さを感じる、大人っぽい雰囲気の。',
+    price:'¥3,850',
+    number:'3',
+  },
+  {
+    src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773485021/y2dnlypgvtim8iqsxbtn.jpg',
+    alt: '明るい色味のお祝い用花束',
+    category: '花束',
+    title: '明るい色味のお祝い用花束',
+    description: 'お祝いの場面に合わせやすい、元気で明るい印象の花束です。',
+    price:'¥6,600',
+    number:'4',
+  },
+  {
+    src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773484900/ncjtpcikcujdapzzdxoy.jpg',
+    alt: '高級感のある',
+    category: 'お供え用アレンジメント',
+    title: 'アレンジメント',
+    description: 'お供え物に合う、上質感のあるアレンジメントです。',
+    price:'¥7150',
+    number:'1'
+  },
   ];
 
   const arrangements = [
     {
+      src:"https://res.cloudinary.com/dambqzrgf/image/upload/v1774292169/lhyafbdi6vwnsxcuu4pg.jpg",
       title: "Sサイズ",
       price: "¥1,650 ~ ¥3,300",
       size: "片手で持ちやすいコンパクトサイズ",
@@ -100,6 +109,7 @@ export default function HomePage() {
       examples: ["誕生日のプチギフト", "お見舞い・お礼", "自宅の玄関や受付用"],
     },
     {
+      src: "https://res.cloudinary.com/dambqzrgf/image/upload/v1774291821/rh0t72ev4euhhynkfuay.jpg",
       title: "Mサイズ",
       price: "¥3,850 ~ ¥6,050",
       size: "両手で抱えるとしっかり華やかなサイズ",
@@ -108,6 +118,7 @@ export default function HomePage() {
       examples: ["誕生日・記念日", "送別・歓迎ギフト", "お店の開店祝い"],
     },
     {
+      src: "https://res.cloudinary.com/dambqzrgf/image/upload/v1774291956/jgtenrevgcoaeujeerxn.jpg",
       title: "Lサイズ",
       price: "¥6,600 ~ ¥11,000",
       size: "存在感があり、空間の主役になるサイズ",
@@ -139,41 +150,50 @@ export default function HomePage() {
       <main>
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-rose-50" />
-          <div className="relative mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-[1.1fr_0.9fr] md:items-center md:py-28">
-            <div>
+          <div className="relative mx-auto grid max-w-6xl gap-12 px-6 py-20 md:items-center md:py-28">
+            <div className="text-center">
               <p className="inline-flex rounded-full border border-emerald-200 bg-white px-4 py-2 text-sm font-semibold text-emerald-800">
                 誕生日・記念日・お祝いの花を、ひとつずつ丁寧に。
               </p>
               <h2 className="mt-6 text-4xl font-bold leading-tight tracking-tight text-zinc-900 md:text-6xl">
-                大石生花店
-                <span className="block text-emerald-700">想いを聞き、ぴったりの花をご提案します。</span>
+                {/* 大石生花店 */}
+                <span className="block text-emerald-700">想いを聞き、イメージにぴったりのお花をご提案します。</span>
               </h2>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-600">
-                お祝いの花束から日常を彩るアレンジメントまで、ご希望やご予算に合わせてご提案します。写真での相談もできるので、初めての方でも安心です。
-              </p>
+              <h3 className="mt-8 text-lg text-zinc-600 text-center">
+                お祝いの花束から日常を彩るアレンジメントまで、ご希望やご予算に合わせてご提案しています！写真での相談もできるので、初めての方でも安心してつかっていただけます！
+              </h3>
 
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <div className="mt-8 flex-col gap-4 sm:flex-row items-center">
+                      <a 
+                        href="tel:0548220688" 
+                        className="inline-flex items-center justify-center rounded-2xl bg-emerald-600 px-7 py-4 text-base font-bold text-white shadow-xl shadow-emerald-200 transition hover:-translate-y-0.5 hover:bg-emerald-700">
+                        お電話で注文・相談する：0548-22-0688
+                      </a>
+              </div>
+
+              <div className="mt-8 flex-col gap-4 sm:flex-row items-center">
                 <a
-                  href="https://line.me/R/ti/p/@364jfrxc"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-2xl bg-emerald-600 px-7 py-4 text-base font-bold text-white shadow-xl shadow-emerald-200 transition hover:-translate-y-0.5 hover:bg-emerald-700"
-                >
-                  LINE公式アカウントで注文・相談する
-                </a>
-
+                        href="https://line.me/R/ti/p/@364jfrxc"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center justify-center rounded-2xl bg-emerald-600 px-7 py-4 text-base font-bold text-white shadow-xl shadow-emerald-200 transition hover:-translate-y-0.5 hover:bg-emerald-700"
+                      >
+                        LINE公式アカウントで注文・相談する
+                      </a>
+              </div>
+              <div>
                 <Link
                   to="/works"
-                  className="inline-flex items-center justify-center rounded-2xl border border-zinc-300 bg-white px-7 py-4 text-base font-semibold text-zinc-800 transition hover:bg-zinc-50"
+                  className="mt-8 inline-flex items-center justify-center rounded-2xl border border-zinc-300 bg-white px-7 py-4 text-base font-semibold text-zinc-800 transition hover:bg-zinc-50"
                 >
-                  作例一覧を見る
+                  作例一覧を確認する
                 </Link>
               </div>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 {[
-                  { label: "相談方法", value: "LINE・店頭" },
-                  { label: "対応内容", value: "花束・アレンジ" },
+                  { label: "相談方法", value: "LINE・店頭・電話" },
+                  { label: "対応内容", value: "花束・フラワーアレンジメント・スタンド生花" },
                   { label: "おすすめ", value: "写真相談" },
                 ].map((item) => (
                   <div key={item.label} className="rounded-2xl border border-white/70 bg-white/80 p-4 shadow-sm">
@@ -183,10 +203,9 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-
-            <div className="relative">
-              <div className="rounded-[2rem] bg-white p-5 shadow-2xl shadow-zinc-200"></div>
-            </div>
+          <div className="mt-8 text-lg text-zinc-600 text-center">
+              ＊「ピンク系でおまかせ」や「２０代女性が好きそうなイメージ」などお渡しする方へのイメージや好きな色などをお伝えいただければ、ピッタリのお花をお作りいたします！
+          </div>
           </div>
         </section>
 
@@ -194,7 +213,7 @@ export default function HomePage() {
           <SectionTitle
             eyebrow="Size Guide"
             title="アレンジメントのサイズ感がわかるセクション"
-            body="注文前に気になりやすい『どれくらいの大きさ？』を、用途ごとにわかりやすく整理しました。LINEで相談するときも、このサイズ感を基準に伝えられます。"
+            body="注文前に気になりやすい『どれくらいの大きさ？』を、用途ごとに整理しています。LINEで相談するときも、このサイズ感を基準にお伝えください。"
           />
 
           <div className="mt-14 grid gap-6 lg:grid-cols-3">
@@ -217,7 +236,7 @@ export default function HomePage() {
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-2xl bg-white px-7 py-4 text-base font-bold text-emerald-700 transition hover:-translate-y-0.5 hover:bg-emerald-50"
               >
-                LINEでサイズ相談する
+                LINEで相談する
               </a>
             </div>
           </div>
@@ -228,21 +247,21 @@ export default function HomePage() {
             <SectionTitle
               eyebrow="Gallery"
               title="ギャラリー"
-              body="Instagramとは別に、サイト内でも人気の雰囲気や作例を見ることができます。このギャラリーやInstagramを参考にしてください。"
+              body="人気の雰囲気や作例を確認できます。このギャラリーやInstagramを参考にお伝えください。"
             />
             <div className="mt-10 flex justify-center">
               <Link
                 to="/works"
                 className="inline-flex items-center justify-center rounded-2xl border border-zinc-300 bg-white px-7 py-4 text-base font-semibold text-zinc-800 transition hover:bg-zinc-50"
               >
-                作例一覧を見る
+                作例一覧を確認する
               </Link>
             </div>
 
             <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {galleryImages.map((image) => (
+              {gallery.map((image) => (
                 <div
-                  key={image.src}
+                  key={image.title}
                   className="group overflow-hidden rounded-[1.75rem] border border-zinc-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
                 >
                   <div className="h-120 overflow-hidden bg-zinc-100">
@@ -255,8 +274,15 @@ export default function HomePage() {
                   <div className="p-5">
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-700">
                       {image.category}
+                      {image.number}
                     </p>
-                    <p className="mt-2 text-base font-medium leading-7 text-zinc-700">{image.alt}</p>
+                    <h3 className="mt-2 text-xl font-bold text-zinc-900">{image.title}</h3>
+                    {image.price && (
+                      <p className="mt-2 inline-flex rounded-full bg-emerald-50 px-3 py-1 text-sm font-semibold text-emerald-800">
+                        {image.price}
+                      </p>
+                    )}
+                    <p className="mt-2 text-base font-medium leading-7 text-zinc-700">{image.description}</p>
                   </div>
                 </div>
               ))}
@@ -266,7 +292,7 @@ export default function HomePage() {
               <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-700">Point</p>
-                  <h3 className="mt-3 text-2xl font-bold text-zinc-900">好みの雰囲気に近い画像があれば、そのままLINEで伝えられます。</h3>
+                  <h3 className="mt-3 text-2xl font-bold text-zinc-900">好みの雰囲気に近い画像があれば、そのままLINEでお伝えください。</h3>
                   <p className="mt-3 text-base leading-8 text-zinc-600">
                     「この写真みたいな色味で」「このボリューム感に近い感じで」など、言葉にしづらい希望も伝えやすくなります。
                   </p>
@@ -292,7 +318,7 @@ export default function HomePage() {
               body="季節の花や直近の作例、色味の雰囲気をInstagramで確認できます。想いを形にする参考にしてください。"
             />
 
-            <div className="mt-14 grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="mt-14 grid gap-8">
               <div className="overflow-hidden rounded-[2rem] border border-zinc-200 bg-zinc-50 shadow-sm">
                 <div className="border-b border-zinc-200 bg-white px-6 py-4">
                   <p className="text-sm font-semibold text-zinc-800">公式Instagram</p>
@@ -306,7 +332,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-sm">
+              {/* <div className="rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-sm">
                 <h3 className="mt-3 text-2xl font-bold text-zinc-900">写真から雰囲気を選べると、注文しやすい。</h3>
                 <ul className="mt-6 space-y-4 text-base leading-8 text-zinc-600">
                   <li>・色味やテイストの好みを共有しやすい</li>
@@ -329,7 +355,7 @@ export default function HomePage() {
                 >
                   LINEで相談する
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -414,7 +440,7 @@ export default function HomePage() {
                   href="tel:0548-22-0688"
                   className="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-emerald-600 px-6 py-4 text-base font-bold text-white transition hover:-translate-y-0.5 hover:bg-emerald-700"
                 >
-                  電話で問い合わせる
+                  電話で問い合わせ
                 </a>
               </div>
             </div>
