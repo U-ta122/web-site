@@ -102,7 +102,7 @@ export default function HomePage() {
     {
       src:"https://res.cloudinary.com/dambqzrgf/image/upload/v1774292169/lhyafbdi6vwnsxcuu4pg.jpg",
       title: "Sサイズ",
-      price: "高さ15cm x 横20cm x 奥行15cm",
+      price: "高さ25cm x 横20cm x 奥行15cm",
       size: "片手で持ちやすいコンパクトサイズ",
       description:
         "ちょっとしたお礼やご自宅用に選ばれやすい、日常に取り入れやすいアレンジメントです。玄関やデスク、カウンターにも置きやすいボリューム感です。",
@@ -111,7 +111,7 @@ export default function HomePage() {
     {
       src: "https://res.cloudinary.com/dambqzrgf/image/upload/v1774291821/rh0t72ev4euhhynkfuay.jpg",
       title: "Mサイズ",
-      price: "高さ30cm x 横20cm x 奥行15cm",
+      price: "高さ35cm x 横30cm x 奥行25cm",
       size: "両手で抱えるとしっかり華やかなサイズ",
       description:
         "迷ったらまず選びやすい人気サイズです。写真映えもしやすく、誕生日や記念日、お祝いの贈りものとして使いやすいバランスです。",
@@ -120,7 +120,7 @@ export default function HomePage() {
     {
       src: "https://res.cloudinary.com/dambqzrgf/image/upload/v1774291956/jgtenrevgcoaeujeerxn.jpg",
       title: "Lサイズ",
-      price: "高さ60cm x 横30cm x 奥行20cm",
+      price: "高さ60cm x 横35cm x 奥行25cm",
       size: "存在感があり、空間の主役になるサイズ",
       description:
         "特別なお祝いにふさわしい、ボリューム重視のアレンジメントです。会場装花のような華やかさを求める場面にもおすすめです。",
@@ -414,7 +414,7 @@ export default function HomePage() {
                   <li>・いちばんおすすめの注文方法</li>
                 </ul>
                 <a
-                  href="https://example.com/order-form"
+                  href="https://forms.gle/S1QtkEGdEYzqdTJH7"
                   target="_blank"
                   rel="noreferrer"
                   className="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-emerald-600 px-6 py-4 text-base font-bold text-white transition hover:-translate-y-0.5 hover:bg-emerald-700"
