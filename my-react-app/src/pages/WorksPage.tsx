@@ -12,13 +12,14 @@ type WorkItem = {
 // http://localhost:5173/admin/upload
 // この値段からお受けしています的な文言もわんちゃん欲しい
 // ハッシュタグみたいなのでもしぼりたい
+// 住宅検索みたいに絞り込みのUIもいい感じにはしたいよね
 
 
 const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773485095/cf9msuevplq3xvyugwsq.jpg',
     category: '花束',
-    title: '可愛い色合いの花束',
+    title: 'パステル系の花束',
     description: 'パステルカラーをベースとした色味で、可愛らしい雰囲気の方へのプレゼントや誕生日のお祝いなどに。',
     price:'¥3,300',
     number:'1'
@@ -26,7 +27,7 @@ const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773485072/quf4ogodtm8tcru4xuyk.jpg',
     category: '花束',
-    title: '華やかな花束',
+    title: '緑と白系の花束',
     description: '明るく華やかな印象で、贈りものとして存在感のある。',
     price:'¥3,300',
     number:'2',
@@ -34,7 +35,7 @@ const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773485044/kbx7ajs0ukfkzuvzlm5c.jpg',
     category: '花束',
-    title: '紫ベースの大人な花束',
+    title: '紫系の花束',
     description: '落ち着きと上品さを感じる、大人っぽい雰囲気の。',
     price:'¥4,400',
     number:'3',
@@ -50,7 +51,7 @@ const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773485021/y2dnlypgvtim8iqsxbtn.jpg',
     category: '花束',
-    title: '明るい色味のお祝い用花束',
+    title: 'ピンク、オレンジ系のお祝い用花束',
     description: 'お祝いの場面に合わせやすい、元気で明るい印象の花束です。',
     price:'¥6,600',
     number:'4',
@@ -58,7 +59,7 @@ const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773484900/ncjtpcikcujdapzzdxoy.jpg',
     category: 'お供え用アレンジメント',
-    title: 'アレンジメント',
+    title: '白と紫系のアレンジメント',
     description: 'お供え物に合う、上質感のあるアレンジメントです。',
     price:'¥7150',
     number:'1'
@@ -66,7 +67,7 @@ const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773483398/hebbuylwdk5c3xarij9u.jpg',
     category: '花束',
-    title: '暖かい色合いの花束',
+    title: '黄色、オレンジ系の花束',
     description: '季節感を意識した、印象に残る花束です。',
     price:'¥4,400',
     number:'5'
@@ -74,7 +75,7 @@ const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773485368/nomfmwuskiy82teevqid.jpg',
     category: '花束',
-    title: '緑色ベースの花束',
+    title: '緑と赤系の花束',
     description: '鮮やかな色味で、誕生日やお祝いに選ばれやすい。',
     price:'¥3,850',
     number:'6'
@@ -82,8 +83,8 @@ const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773485430/ujvixrsmk9ljvoldqaag.jpg',
     category: '花束',
-    title: 'やさしい黄色をベースにした花束',
-    description: 'やわらかい色味で、誕生日やお祝いに選ばれやすい。',
+    title: 'ピンクと黄色系の花束',
+    description: '短めで若い人に人気。やわらかい色味で、誕生日やお祝いに選ばれやすい。',
     price:'¥3,300',
     number:'7'
   },
@@ -106,7 +107,7 @@ const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774344072/h0nukhyfzduutnniczbe.jpg',
     category: '花束',
-    title: '',
+    title: 'オレンジと白系の花束',
     description: '',
     price:'¥3,850',
     number:'10'
@@ -114,23 +115,23 @@ const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774344148/l1peie6pmg7qbu7d5jcz.jpg',
     category: '花束',
-    title: '',
-    description: '',
+    title: 'ピンクと白系の花束',
+    description: 'バレンタインをイメージしてお作りしました。',
     price:'¥4,400',
     number:'11'
   },
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774344186/jnroeh4yimo6piojevvu.jpg',
     category: '花束',
-    title: '',
-    description: '',
+    title: 'ピンクと紫系の花束',
+    description: 'バルーンがアクセントでかわいい花束です。',
     price:'¥2,200',
     number:'12'
   },
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774344220/mfsnkevwehwea4yodysm.jpg',
     category: '花束',
-    title: '',
+    title: 'ピンク系の花束',
     description: '',
     price:'¥4,950',
     number:'13'
@@ -138,15 +139,15 @@ const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774344261/s6dbhqerbpsohccgul61.jpg',
     category: '花束',
-    title: '',
-    description: '',
+    title: '紫と白系の花束',
+    description: 'かわいい',
     price:'¥4,950',
     number:'14'
   },
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774345008/vu0pgoxlj9x2n24hygn5.jpg',
     category: '花束',
-    title: '',
+    title: '青、水色系の花束',
     description: '',
     price:'¥4,400',
     number:'15'
@@ -154,15 +155,15 @@ const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774345080/vmh8n9ag0nvkvze1dpum.jpg',
     category: 'フラワーアレンジメント',
-    title: '',
-    description: '',
+    title: 'ピンクと黄色系のアレンジメント',
+    description: '春らしくという要望に応えてお作りしました。',
     price:'¥4,400',
     number:'2'
   },
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774345219/lunenyoxlc5zbpeunph8.jpg',
     category: '花束',
-    title: '',
+    title: '青と白系の花束',
     description: '青薔薇と白薔薇を混ぜた特別な花束です。ラメや染色など多くの技術が詰め込まれています。',
     price:'¥1,1000',
     number:'16'
@@ -171,22 +172,22 @@ const works: WorkItem[] = [
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774345323/jlkzxbkxvblpcxlrh2mt.jpg',
     category: '花束',
     title: '',
-    description: '',
-    price:'¥7,150 x 2',
+    description: '成人式の後撮りで利用するためにお揃いでご準備しました。',
+    price:'¥6,600 x 2',
     number:'17,18'
   },
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774345355/uhfbzu2byfpdo2jxgdiv.jpg',
     category: 'フラワーアレンジメント',
-    title: '',
-    description: '',
+    title: 'オレンジ系のアレンジメント',
+    description: '春らしく淡い色合いで可愛くお作りしました。',
     price:'¥6,050',
     number:'3'
   },
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774345380/leivb3yqtz84pahpbzxw.jpg',
     category: '花束',
-    title: '',
+    title: 'ピンクと白系の花束',
     description: '',
     price:'¥5,050',
     number:'19'
@@ -194,7 +195,7 @@ const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774345772/kxn1iivv9ozwrhtvdplt.jpg',
     category: '花束',
-    title: '',
+    title: '青とオレンジ系の花束',
     description: '木箱は付属しておりません',
     price:'¥2,200',
     number:'20'
@@ -202,15 +203,15 @@ const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774345806/cy2k6v8ondgxjboojswj.jpg',
     category: '花束',
-    title: '',
-    description: '',
+    title: 'オレンジ系の花束',
+    description: 'ガーベラを多めにという要望にお応えしました。',
     price:'¥4,950',
     number:'21'
   },
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774345831/dppdnq3ebf1mgy51xdkt.jpg',
     category: '花束',
-    title: '',
+    title: 'ピンク系の花束',
     description: '',
     price:'¥4,950',
     number:'22'
@@ -218,7 +219,7 @@ const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774345907/wacvmb4mxezaic8bl2dw.jpg',
     category: '花束',
-    title: '',
+    title: '黄色系の花束',
     description: 'スイートピーなどの季節のお花はその他のお花に変更になる場合がございます。ご了承ください',
     price:'¥2,200',
     number:'23'
@@ -226,7 +227,7 @@ const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774345926/qvlbzueblm0hzyukxcek.jpg',
     category: '花束',
-    title: '',
+    title: '青と白系の花束',
     description: '',
     price:'¥5,500',
     number:'24'
@@ -234,15 +235,15 @@ const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774345948/heb5f91bzf4iqo7kdcgy.jpg',
     category: '花束',
-    title: '',
-    description: '',
+    title: 'オレンジ系の花束',
+    description: '黒のラッピングをアクセントに仕上げました。',
     price:'¥4,400',
     number:'25'
   },
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774345979/xgoo6gu0gks64nzed9uk.jpg',
     category: '花束',
-    title: '',
+    title: '青系の花束',
     description: '',
     price:'¥4,950',
     number:'26'
@@ -250,7 +251,7 @@ const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774345996/glyxc85ettmtsfdrcx8s.jpg',
     category: 'フラワーアレンジメント',
-    title: '',
+    title: 'ピンクと白系のアレンジメント',
     description: '',
     price:'¥4,400',
     number:'4'
@@ -258,7 +259,7 @@ const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774346021/wokbnjatqkggqyka65kv.jpg',
     category: '花束',
-    title: '',
+    title: 'ピンクとオレンジ系の花束',
     description: '',
     price:'¥3,300',
     number:'27'
@@ -266,51 +267,51 @@ const works: WorkItem[] = [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1774346041/xgosxzman0y97cbmuqrd.jpg',
     category: '花束',
-    title: '',
+    title: 'ピンク系の花束',
     description: '',
     price:'¥3,850',
     number:'28'
   },
-  {
-    src: '',
-    category: '花束',
-    title: '',
-    description: '',
-    price:'¥',
-    number:''
-  },
-  {
-    src: '',
-    category: '花束',
-    title: '',
-    description: '',
-    price:'',
-    number:''
-  },
-  {
-    src: '',
-    category: '花束',
-    title: '',
-    description: '',
-    price:'',
-    number:''
-  },
-  {
-    src: '',
-    category: '花束',
-    title: '',
-    description: '',
-    price:'',
-    number:''
-  },
-  {
-    src: '',
-    category: '花束',
-    title: '',
-    description: '',
-    price:'',
-    number:''
-  },
+  // {
+  //   src: '',
+  //   category: '花束',
+  //   title: '',
+  //   description: '',
+  //   price:'¥',
+  //   number:''
+  // },
+  // {
+  //   src: '',
+  //   category: '花束',
+  //   title: '',
+  //   description: '',
+  //   price:'',
+  //   number:''
+  // },
+  // {
+  //   src: '',
+  //   category: '花束',
+  //   title: '',
+  //   description: '',
+  //   price:'',
+  //   number:''
+  // },
+  // {
+  //   src: '',
+  //   category: '花束',
+  //   title: '',
+  //   description: '',
+  //   price:'',
+  //   number:''
+  // },
+  // {
+  //   src: '',
+  //   category: '花束',
+  //   title: '',
+  //   description: '',
+  //   price:'',
+  //   number:''
+  // },
 ];
 
 export default function WorksPage() {

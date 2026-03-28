@@ -24,7 +24,7 @@ function ArrangementCard({ src, title, price, size, description, examples }: Arr
     <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
       <div className="mb-4 flex items-start justify-between gap-4">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-700">Arrangement</p>
+          {/* <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-700">Arrangement</p> */}
           <h3 className="mt-2 text-2xl font-bold text-zinc-900">{title}</h3>
         </div>
       </div>
@@ -189,6 +189,9 @@ export default function HomePage() {
                   作例一覧を確認する
                 </Link>
               </div>
+
+//花束短め、長め。アレンジメントサイズ比較、3種類ずつ
+//特別な花束（60本のバラなど）の場合のためのところを作る。
 
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 {[
@@ -529,9 +532,9 @@ export default function HomePage() {
                 <div className="overflow-hidden rounded-[2rem] border border-zinc-200 bg-zinc-50 shadow-sm">
                   <div className="border-b border-zinc-200 bg-white px-6 py-4">
                     <p className="text-sm font-semibold text-zinc-800">Google Map</p>
-                    <p className="mt-1 text-sm text-zinc-500">
+                    {/* <p className="mt-1 text-sm text-zinc-500">
                       埋め込みURLを差し替えると、そのまま店舗地図として使えます。
-                    </p>
+                    </p> */}
                   </div>
 
                   <div className="h-[360px] w-full bg-white">
