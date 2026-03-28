@@ -71,9 +71,9 @@ export default function HomePage() {
   const gallery:GalleryItem[]= [
   {
     src: 'https://res.cloudinary.com/dambqzrgf/image/upload/v1773485044/kbx7ajs0ukfkzuvzlm5c.jpg',
-    alt: '紫ベースの大人な花束',
+    alt: '紫系の大人な花束',
     category: '花束',
-    title: '紫ベースの大人な花束',
+    title: '紫系の大人な花束',
     description: '落ち着きと上品さを感じる、大人っぽい雰囲気の花束です。',
     price:'¥3,850',
     number:'3',
@@ -192,6 +192,8 @@ export default function HomePage() {
 
 {/* 花束短め、長め。アレンジメントサイズ比較、3種類ずつ
 特別な花束（60本のバラなど）の場合のためのところを作る。 */}
+
+{/* ホームページの色味を変更プラス最初の背景を花にするとか */}
 
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 {[
@@ -518,7 +520,7 @@ export default function HomePage() {
                   </a>
 
                   <a
-                    href="https://example.com/order-form"
+                    href="https://forms.gle/S1QtkEGdEYzqdTJH7"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center justify-center rounded-2xl border border-zinc-300 bg-white px-6 py-4 text-base font-bold text-zinc-900 transition hover:bg-zinc-50"
