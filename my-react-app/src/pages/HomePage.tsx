@@ -336,31 +336,6 @@ export default function HomePage() {
                   />
                 </div>
               </div>
-
-              {/* <div className="rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-sm">
-                <h3 className="mt-3 text-2xl font-bold text-zinc-900">写真から雰囲気を選べると、注文しやすい。</h3>
-                <ul className="mt-6 space-y-4 text-base leading-8 text-zinc-600">
-                  <li>・色味やテイストの好みを共有しやすい</li>
-                  <li>・過去の制作事例がそのまま安心材料になる</li>
-                  <li>・LINE相談への導線と相性がいい</li>
-                </ul>
-
-                <div className="mt-8 rounded-3xl bg-zinc-50 p-6">
-                  <p className="text-sm font-semibold text-zinc-800">おすすめ導線</p>
-                  <p className="mt-2 text-sm leading-7 text-zinc-600">
-                    Instagramで好みの雰囲気を見つける → LINEでその投稿を伝えて相談する、の流れにすると成約につながりやすいです。
-                  </p>
-                </div>
-
-                <a
-                  href="https://line.me/R/ti/p/@364jfrxc"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-emerald-600 px-6 py-4 text-base font-bold text-white shadow-lg shadow-emerald-200 transition hover:-translate-y-0.5 hover:bg-emerald-700"
-                >
-                  LINEで相談する
-                </a>
-              </div> */}
             </div>
           </div>
         </section>
@@ -388,11 +363,11 @@ export default function HomePage() {
                 <p className="mt-3 text-sm leading-7 text-zinc-600">
                   色味や雰囲気、予算感など、まだ迷っている段階のご相談はこちら。画像を見ながらイメージを伝えやすい方法です。
                 </p>
-                <ul className="mt-4 space-y-2 text-sm text-zinc-600">
+                {/* <ul className="mt-4 space-y-2 text-sm text-zinc-600">
                   <li>・写真を見せながら相談しやすい</li>
                   <li>・通常の予約相談におすすめ</li>
                   <li>・返信は営業時間内に順次対応</li>
-                </ul>
+                </ul> */}
                 <a
                   href="https://line.me/R/ti/p/@364jfrxc"
                   target="_blank"
@@ -413,11 +388,11 @@ export default function HomePage() {
                   {/* ＊配達の場合は¥3,300から配達料¥550円で承っております。また¥5,500円以上の場合配達料がかかりませんので気兼ねなくご利用ください。
                   ＊配達可能時間は17時半までで承っております。配達圏内は牧之原市と吉田町です。 */}
                 </p>
-                <ul className="mt-4 space-y-2 text-sm text-zinc-600">
+                {/* <ul className="mt-4 space-y-2 text-sm text-zinc-600">
                   <li>・必要項目を漏れなく送れる</li>
                   <li>・注文確定までスムーズ</li>
                   <li>・いちばんおすすめの注文方法</li>
-                </ul>
+                </ul> */}
                 <a
                   href="https://forms.gle/S1QtkEGdEYzqdTJH7"
                   target="_blank"
@@ -436,11 +411,11 @@ export default function HomePage() {
                 <p className="mt-3 text-sm leading-7 text-zinc-600">
                   当日受取やお急ぎのご注文は、お電話でお願いしております。営業時間内にご連絡ください。
                 </p>
-                <ul className="mt-4 space-y-2 text-sm text-zinc-600">
+                {/* <ul className="mt-4 space-y-2 text-sm text-zinc-600">
                   <li>・当日注文の確認がしやすい</li>
                   <li>・すぐ返答が必要な方向け</li>
                   <li>・営業時間内の対応が基本</li>
-                </ul>
+                </ul> */}
                 <a
                   href="tel:0548-22-0688"
                   className="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-emerald-600 px-6 py-4 text-base font-bold text-white transition hover:-translate-y-0.5 hover:bg-emerald-700"
